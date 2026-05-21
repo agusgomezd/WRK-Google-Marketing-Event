@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Google Marketing Live 2026 — Paid Search Briefing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT,WONK@0,9..144,200..900,0..100,0..1;1,9..144,200..900,0..100,0..1&family=Manrope:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --paper: #F7F2E8;
+    --paper-warm: #F1EADC;
+    --paper-deep: #ECE3D1;
+    --ink: #14110D;
+    --ink-soft: #2A2620;
+    --ink-quiet: #534C42;
+    --muted: #8C8478;
+    --muted-soft: #ADA496;
+    --sepia: #6B3A1F;
+    --sepia-soft: #8A4F2E;
+    --sepia-tint: rgba(107, 58, 31, 0.06);
+    --hairline: #DDD3BF;
+    --hairline-soft: #E8DFC9;
+    --gold: #A6864C;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Manrope', system-ui, sans-serif;
+    font-size: 15.5px;
+    line-height: 1.7;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-feature-settings: "kern", "liga", "calt", "ss01";
+    text-rendering: optimizeLegibility;
+  }
+
+  /* ─── Paper grain ─── */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 15% 20%, rgba(166, 134, 76, 0.04) 0%, transparent 55%),
+      radial-gradient(ellipse at 85% 80%, rgba(107, 58, 31, 0.03) 0%, transparent 55%),
+      radial-gradient(circle at 50% 50%, transparent 50%, rgba(20, 17, 13, 0.015) 100%);
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .container {
+    position: relative;
+    z-index: 1;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 72px;
+  }
+
+  /* ═══════════════════════════════════════════
+     COVER — BOOK TITLE PAGE
+     ═══════════════════════════════════════════ */
+
+  .cover {
+    min-height: 100vh;
+    padding: 64px 0 72px;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    animation: fadeUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .masthead {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    font-weight: 400;
+    color: var(--ink-quiet);
+  }
+
+  .masthead-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .masthead-brand::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    background: var(--sepia);
+    border-radius: 50%;
+  }
+
+  .cover-stage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 64px 0;
+  }
+
+  .cover-eyebrow {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.34em;
+    text-transform: uppercase;
+    color: var(--sepia);
+    margin-bottom: 88px;
+    display: inline-flex;
+    align-items: center;
+    gap: 18px;
+    font-weight: 500;
+  }
+
+  .cover-eyebrow::before,
+  .cover-eyebrow::after {
+    content: "";
+    width: 32px;
+    height: 1px;
+    background: var(--sepia);
+  }
+
+  .cover-title {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 144, 'SOFT' 30, 'WONK' 1;
+    font-weight: 280;
+    font-size: clamp(64px, 9vw, 132px);
+    line-height: 0.9;
+    letter-spacing: -0.04em;
+    color: var(--ink);
+    margin-bottom: 56px;
+    max-width: 1000px;
+  }
+
+  .cover-title em {
+    font-style: italic;
+    font-weight: 240;
+    color: var(--sepia);
+    font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
+  }
+
+  .cover-dek {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 36, 'SOFT' 60;
+    font-weight: 280;
+    font-size: clamp(20px, 2vw, 26px);
+    line-height: 1.42;
+    color: var(--ink-soft);
+    max-width: 680px;
+    font-style: italic;
+    letter-spacing: -0.012em;
+  }
+
+  .cover-base {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) auto;
+    gap: 56px;
+    padding-top: 36px;
+    border-top: 1px solid var(--hairline);
+    align-items: flex-end;
+  }
+
+  .meta-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 10px;
+    display: block;
+    font-weight: 500;
+  }
+
+  .meta-value {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 24, 'SOFT' 30;
+    font-weight: 400;
+    font-size: 17px;
+    color: var(--ink);
+    line-height: 1.3;
+    letter-spacing: -0.005em;
+  }
+
+  .cover-ornament {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
+    font-style: italic;
+    font-weight: 280;
+    font-size: 56px;
+    color: var(--sepia);
+    line-height: 1;
+    letter-spacing: -0.03em;
+  }
+
+  /* ═══════════════════════════════════════════
+     PREFACE
+     ═══════════════════════════════════════════ */
+
+  .preface {
+    padding: 120px 0 96px;
+    border-top: 1px solid var(--hairline);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 80px;
+    align-items: start;
+  }
+
+  .aside-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--sepia);
+    line-height: 1.7;
+    font-weight: 500;
+  }
+
+  .aside-label span {
+    display: block;
+    color: var(--muted);
+    margin-top: 8px;
+    font-weight: 400;
+  }
+
+  .preface-body {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 36, 'SOFT' 50;
+    font-weight: 320;
+    font-size: 27px;
+    line-height: 1.4;
+    color: var(--ink);
+    letter-spacing: -0.018em;
+    max-width: 760px;
+  }
+
+  .preface-body p + p { margin-top: 32px; }
+
+  .preface-body em {
+    font-style: italic;
+    color: var(--sepia);
+  }
+
+  .preface-body .drop {
+    float: left;
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
+    font-style: italic;
+    font-weight: 280;
+    font-size: 124px;
+    line-height: 0.8;
+    padding: 14px 18px 0 0;
+    color: var(--sepia);
+  }
+
+  /* ═══════════════════════════════════════════
+     SECTIONS
+     ═══════════════════════════════════════════ */
+
+  .section {
+    padding: 112px 0;
+    border-top: 1px solid var(--hairline);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 80px;
+    animation: fadeUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+  }
+
+  .section-aside {
+    position: sticky;
+    top: 48px;
+    align-self: start;
+  }
+
+  .section-numeral {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
+    font-style: italic;
+    font-weight: 240;
+    font-size: 88px;
+    line-height: 0.9;
+    color: var(--sepia);
+    margin-bottom: 24px;
+    letter-spacing: -0.04em;
+  }
+
+  .section-kicker {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-quiet);
+    line-height: 1.6;
+    font-weight: 500;
+  }
+
+  .section-kicker .sub {
+    display: block;
+    color: var(--muted);
+    margin-top: 6px;
+    font-weight: 400;
+    font-size: 9.5px;
+  }
+
+  .section-main {
+    max-width: 760px;
+  }
+
+  .section-title {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 72, 'SOFT' 40, 'WONK' 1;
+    font-weight: 300;
+    font-size: 56px;
+    line-height: 1;
+    letter-spacing: -0.035em;
+    color: var(--ink);
+    margin-bottom: 32px;
+  }
+
+  .section-title em {
+    font-style: italic;
+    color: var(--sepia);
+    font-weight: 280;
+    font-variation-settings: 'opsz' 72, 'SOFT' 100, 'WONK' 1;
+  }
+
+  .section-lead {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 24, 'SOFT' 50;
+    font-weight: 320;
+    font-size: 22px;
+    line-height: 1.5;
+    color: var(--ink-soft);
+    margin-bottom: 40px;
+    letter-spacing: -0.012em;
+    max-width: 680px;
+  }
+
+  .section-body p {
+    font-size: 15.5px;
+    line-height: 1.75;
+    color: var(--ink-soft);
+    margin-bottom: 20px;
+    max-width: 680px;
+  }
+
+  .section-body em {
+    font-style: italic;
+    color: var(--sepia);
+    font-weight: 500;
+  }
+
+  /* ─── Feature List ─── */
+  .features {
+    list-style: none;
+    margin: 32px 0 40px;
+    max-width: 720px;
+  }
+
+  .features li {
+    padding: 22px 0;
+    border-bottom: 1px solid var(--hairline-soft);
+    display: grid;
+    grid-template-columns: 28px 1fr;
+    gap: 22px;
+    align-items: baseline;
+  }
+
+  .features li:first-child { padding-top: 0; }
+  .features li:last-child { border-bottom: none; padding-bottom: 0; }
+
+  .features .index {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 24, 'SOFT' 100, 'WONK' 1;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--sepia);
+    text-align: right;
+  }
+
+  .features .name {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 24, 'SOFT' 30;
+    font-weight: 480;
+    font-size: 20px;
+    color: var(--ink);
+    display: block;
+    margin-bottom: 6px;
+    letter-spacing: -0.018em;
+  }
+
+  .features .desc {
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--ink-quiet);
+  }
+
+  /* ─── Sharp Read — contrarian sidebar ─── */
+  .sharp-read {
+    margin: 48px 0;
+    padding: 32px 0 32px 36px;
+    border-left: 1px solid var(--sepia);
+    position: relative;
+    max-width: 680px;
+    background: linear-gradient(to right, var(--sepia-tint) 0%, transparent 100%);
+  }
+
+  .sharp-read::before {
+    content: "";
+    position: absolute;
+    left: -4px;
+    top: 32px;
+    width: 7px;
+    height: 7px;
+    background: var(--sepia);
+    border-radius: 50%;
+  }
+
+  .sharp-read-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--sepia);
+    margin-bottom: 14px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .sharp-read-label::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--hairline);
+  }
+
+  .sharp-read-body {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 24, 'SOFT' 50;
+    font-style: italic;
+    font-weight: 340;
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--ink);
+    letter-spacing: -0.012em;
+  }
+
+  .sharp-read-body strong {
+    font-style: normal;
+    font-weight: 500;
+    color: var(--sepia);
+  }
+
+  /* ─── Pilot Proposal — structured experiment design ─── */
+  .pilot {
+    margin: 48px 0 0;
+    padding: 36px 40px;
+    background: var(--paper-warm);
+    border: 1px solid var(--hairline);
+    max-width: 720px;
+    position: relative;
+  }
+
+  .pilot::before {
+    content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    right: -1px;
+    height: 2px;
+    background: var(--ink);
+  }
+
+  .pilot-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 28px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid var(--hairline);
+  }
+
+  .pilot-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .pilot-number {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 24, 'SOFT' 100, 'WONK' 1;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--sepia);
+    letter-spacing: 0.05em;
+  }
+
+  .pilot-grid {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 18px 24px;
+  }
+
+  .pilot-field-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 9.5px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--sepia);
+    line-height: 1.6;
+    padding-top: 4px;
+    font-weight: 500;
+  }
+
+  .pilot-field-value {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 18, 'SOFT' 40;
+    font-weight: 380;
+    font-size: 16.5px;
+    line-height: 1.55;
+    color: var(--ink);
+    letter-spacing: -0.008em;
+  }
+
+  .pilot-field-value em {
+    font-style: italic;
+    color: var(--sepia);
+    font-weight: 460;
+  }
+
+  .pilot-field-value code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 13px;
+    background: var(--paper-deep);
+    padding: 2px 7px;
+    border-radius: 2px;
+    color: var(--sepia);
+  }
+
+  /* ─── Pull stats row ─── */
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 40px;
+    margin: 40px 0;
+    padding: 32px 0;
+    border-top: 1px solid var(--hairline);
+    border-bottom: 1px solid var(--hairline);
+    max-width: 680px;
+  }
+
+  .stat-value {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 72, 'SOFT' 100, 'WONK' 1;
+    font-style: italic;
+    font-weight: 280;
+    font-size: 48px;
+    line-height: 1;
+    color: var(--sepia);
+    margin-bottom: 8px;
+    letter-spacing: -0.035em;
+  }
+
+  .stat-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10.5px;
+    line-height: 1.5;
+    color: var(--muted);
+    letter-spacing: 0.06em;
+  }
+
+  .stat-note {
+    font-family: 'Fraunces', serif;
+    font-style: italic;
+    font-weight: 320;
+    font-size: 14px;
+    color: var(--muted);
+    margin-top: 16px;
+    max-width: 680px;
+  }
+
+  /* ═══════════════════════════════════════════
+     PILOT INDEX (final list)
+     ═══════════════════════════════════════════ */
+
+  .pilot-index {
+    padding: 128px 0 96px;
+    border-top: 1px solid var(--hairline);
+  }
+
+  .pilot-index-header {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 80px;
+    margin-bottom: 64px;
+  }
+
+  .pilot-index-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 0;
+    border-top: 1px solid var(--ink);
+  }
+
+  .pilot-card {
+    display: grid;
+    grid-template-columns: 80px 1fr 140px;
+    gap: 48px;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--hairline-soft);
+    align-items: baseline;
+  }
+
+  .pilot-card:last-child {
+    border-bottom: 1px solid var(--ink);
+  }
+
+  .pilot-card-num {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 72, 'SOFT' 100, 'WONK' 1;
+    font-style: italic;
+    font-weight: 260;
+    font-size: 44px;
+    line-height: 1;
+    color: var(--sepia);
+    letter-spacing: -0.04em;
+  }
+
+  .pilot-card-body {
+    max-width: 720px;
+  }
+
+  .pilot-card-name {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 36, 'SOFT' 30;
+    font-weight: 460;
+    font-size: 22px;
+    line-height: 1.25;
+    color: var(--ink);
+    margin-bottom: 10px;
+    letter-spacing: -0.022em;
+  }
+
+  .pilot-card-name em {
+    font-style: italic;
+    color: var(--sepia);
+    font-weight: 380;
+  }
+
+  .pilot-card-meta {
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink-quiet);
+  }
+
+  .pilot-card-meta strong {
+    color: var(--ink);
+    font-weight: 500;
+  }
+
+  .pilot-card-meta .divider {
+    color: var(--hairline);
+    margin: 0 10px;
+  }
+
+  .pilot-card-when {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 11px;
+    letter-spacing: 0.1em;
+    color: var(--muted);
+    text-align: right;
+    line-height: 1.5;
+  }
+
+  .pilot-card-when strong {
+    display: block;
+    color: var(--ink);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    margin-bottom: 4px;
+  }
+
+  /* ═══════════════════════════════════════════
+     CLOSING
+     ═══════════════════════════════════════════ */
+
+  .closing {
+    padding: 112px 0 144px;
+    border-top: 1px solid var(--hairline);
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 80px;
+  }
+
+  .closing-body {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 36, 'SOFT' 40;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 1.35;
+    color: var(--ink);
+    letter-spacing: -0.022em;
+    max-width: 760px;
+  }
+
+  .closing-body p + p { margin-top: 32px; }
+
+  .closing-body em {
+    font-style: italic;
+    color: var(--sepia);
+    font-weight: 320;
+  }
+
+  .colophon {
+    margin-top: 64px;
+    padding-top: 28px;
+    border-top: 1px solid var(--hairline);
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+    max-width: 760px;
+  }
+
+  .colophon .fin {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 144, 'SOFT' 100, 'WONK' 1;
+    font-style: italic;
+    font-size: 36px;
+    color: var(--sepia);
+    text-transform: none;
+    letter-spacing: -0.03em;
+    font-weight: 280;
+    line-height: 1;
+  }
+
+  /* ═══════════════════════════════════════════
+     ANIMATIONS
+     ═══════════════════════════════════════════ */
+
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ═══════════════════════════════════════════
+     RESPONSIVE
+     ═══════════════════════════════════════════ */
+
+  @media (max-width: 920px) {
+    .container { padding: 0 24px; }
+    .preface, .section, .closing, .pilot-index-header {
+      grid-template-columns: 1fr;
+      gap: 28px;
+    }
+    .section-aside { position: static; }
+    .cover-base { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .cover-ornament { display: none; }
+    .section-title { font-size: 38px; }
+    .section-numeral { font-size: 64px; }
+    .preface-body { font-size: 22px; }
+    .preface-body .drop { font-size: 88px; }
+    .closing-body { font-size: 22px; }
+    .pilot { padding: 24px 22px; }
+    .pilot-grid { grid-template-columns: 1fr; gap: 6px 0; }
+    .pilot-field-label { padding-top: 14px; }
+    .pilot-field-label:first-child { padding-top: 0; }
+    .pilot-card { grid-template-columns: 50px 1fr; gap: 16px; }
+    .pilot-card-when { grid-column: 2; text-align: left; margin-top: 8px; }
+    .pilot-card-num { font-size: 32px; }
+  }
+
+  /* ═══════════════════════════════════════════
+     PRINT
+     ═══════════════════════════════════════════ */
+
+  @media print {
+    body::before { display: none; }
+    body { font-size: 10.5pt; }
+    .container { padding: 0; max-width: 100%; }
+    .cover { min-height: auto; page-break-after: always; padding: 32px 0; }
+    .section, .pilot-index, .closing, .preface { page-break-inside: avoid; padding: 40px 0; }
+    .section-aside { position: static; }
+    .pilot, .sharp-read {
+      -webkit-print-color-adjust: exact;
+      color-adjust: exact;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <!-- ═══════════ COVER ═══════════ -->
+  <header class="cover">
+
+    <div class="masthead">
+      <div class="masthead-brand">WRK Marketing · Paid Search</div>
+      <div>Briefing N°&nbsp;014 · MMXXVI</div>
+    </div>
+
+    <div class="cover-stage">
+      <div class="cover-eyebrow">Google Marketing Live · Mountain View · MMXXVI</div>
+      <h1 class="cover-title">
+        A new <em>vocabulary</em><br>
+        for paid search.
+      </h1>
+      <p class="cover-dek">
+        Eight observations from the keynote, eight experiments worth running,
+        and a few quiet disagreements with the official narrative.
+      </p>
+    </div>
+
+    <div class="cover-base">
+      <div>
+        <span class="meta-label">Event</span>
+        <span class="meta-value">Google Marketing Live</span>
+      </div>
+      <div>
+        <span class="meta-label">Date</span>
+        <span class="meta-value">20 May 2026</span>
+      </div>
+      <div>
+        <span class="meta-label">Prepared for</span>
+        <span class="meta-value">Paid Search Team</span>
+      </div>
+      <div class="cover-ornament">§</div>
+    </div>
+
+  </header>
+
+  <!-- ═══════════ PREFACE ═══════════ -->
+  <section class="preface">
+
+    <div>
+      <div class="aside-label">
+        Preface
+        <span>How to read this</span>
+      </div>
+    </div>
+
+    <div class="preface-body">
+      <p>
+        <span class="drop">T</span>he keynote moved fast and the language was confident, but
+        almost nothing announced has shipped. Most of it is beta, pilot,
+        or <em>"coming this summer."</em> A briefing written today is not a roadmap —
+        it's a reading list with a few small experiments attached.
+      </p>
+      <p>
+        Each section that follows has three parts: <em>the announcement</em>, <em>a sharper read</em>
+        that pushes back on Google's narrative where the math or the history warrants it,
+        and <em>one pilot</em> structured as a real experiment — hypothesis, success criteria,
+        cost, revert condition. Treat the sharp reads as opinions, not facts.
+        Treat the pilots as invitations.
+      </p>
+    </div>
+
+  </section>
+
+  <!-- ═══════════ i. AI MODE / SEARCH ═══════════ -->
+  <section class="section">
+    <aside class="section-aside">
+      <div class="section-numeral">i.</div>
+      <div class="section-kicker">Search & AI Mode<span class="sub">Ad becomes answer</span></div>
+    </aside>
+
+    <div class="section-main">
+      <h2 class="section-title">The ad becomes the <em>answer</em>.</h2>
+      <p class="section-lead">
+        Inside AI Mode, Google is composing ad creative in real time to respond
+        to the user's question and the AI-written answer above it. Eligibility
+        is gated to AI Max for Search or PMax with text customisation.
+      </p>
+
+      <ul class="features">
+        <li>
+          <span class="index">a</span>
+          <div>
+            <span class="name">Conversational Discovery Ads</span>
+            <span class="desc">Gemini-tailored creative answering the user's exact question. Labelled "Sponsored."</span>
+          </div>
+        </li>
+        <li>
+          <span class="index">b</span>
+          <div>
+            <span class="name">Highlighted Answers</span>
+            <span class="desc">When AI Mode lists recommendations, eligible ads appear inline as one of them.</span>
+          </div>
+        </li>
+        <li>
+          <span class="index">c</span>
+          <div>
+            <span class="name">AI-Powered Shopping Ads</span>
+            <span class="desc">Gemini picks SKUs and writes a per-query explainer for why your product fits.</span>
+          </div>
+        </li>
+        <li>
+          <span class="index">d</span>
+          <div>
+            <span class="name">Business Agent for Leads</span>
+            <span class="desc">A brand-tuned chat agent inside the ad. Testing in education, auto, real estate.</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="sharp-read">
+        <div class="sharp-read-label">Sharper Read</div>
+        <div class="sharp-read-body">
+          Google is selling reach, but the reach is unproven. AI Mode has 1B monthly users —
+          we have no public data on what share of that traffic carries genuine purchase intent.
+          We've watched this exact pattern with AMP, Discover, and Local Service Ads:
+          early-adopter bonus, then dilution. <strong>The structural story matters more than the surface story:</strong>
+          any account still on manual keywords is being quietly cut out of an emerging surface
+          whose actual revenue contribution we cannot yet measure.
+        </div>
+      </div>
+
+      <div class="pilot">
+        <div class="pilot-header">
+          <span class="pilot-label">Pilot Proposal</span>
+          <span class="pilot-number">N°&nbsp;01</span>
+        </div>
+        <div class="pilot-grid">
+          <div class="pilot-field-label">Hypothesis</div>
+          <div class="pilot-field-value">AI Max surfaces incremental long-tail queries our keyword structure misses, <em>without</em> degrading CPA on existing terms.</div>
+
+          <div class="pilot-field-label">Success</div>
+          <div class="pilot-field-value"><code>≥30%</code> of conversions from queries not present in baseline keyword set, <em>and</em> blended CPA within <code>15%</code> of baseline.</div>
+
+          <div class="pilot-field-label">Cost</div>
+          <div class="pilot-field-value">~20% of Search budget on one account, 30 days. Low client trust risk if disclosed as a learning pilot.</div>
+
+          <div class="pilot-field-label">Revert</div>
+          <div class="pilot-field-value">Either threshold missed by day 21. Document why and add to the team's internal AI Max playbook.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ ii. AI BRIEF ═══════════ -->
+  <section class="section">
+    <aside class="section-aside">
+      <div class="section-numeral">ii.</div>
+      <div class="section-kicker">AI Brief<span class="sub">A new craft layer</span></div>
+    </aside>
+
+    <div class="section-main">
+      <h2 class="section-title">A brief for <em>Gemini</em>.</h2>
+      <p class="section-lead">
+        Three layers of plain-English input — Messaging, Matching, Audience —
+        that steer how AI Max writes copy and routes queries. If it ships
+        as described, we can A/B test brand propositions inside one campaign.
+      </p>
+
+      <ul class="features">
+        <li>
+          <span class="index">a</span>
+          <div>
+            <span class="name">Messaging Guidelines</span>
+            <span class="desc">Voice, regulated language, claim rules. What ads should and shouldn't say.</span>
+          </div>
+        </li>
+        <li>
+          <span class="index">b</span>
+          <div>
+            <span class="name">Matching Guidelines</span>
+            <span class="desc">Queries to capture and deflect. The closest thing to keyword strategy left.</span>
+          </div>
+        </li>
+        <li>
+          <span class="index">c</span>
+          <div>
+            <span class="name">Audience Guidelines</span>
+            <span class="desc">Who to reach, and how to talk to them. Targeting and creative tailoring in one input.</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="sharp-read">
+        <div class="sharp-read-label">Sharper Read</div>
+        <div class="sharp-read-body">
+          This is the only genuine strategic upgrade in the whole keynote — but it
+          introduces a hidden risk. Today, when creative underperforms, we can isolate
+          copy from targeting from match types. With AI Brief, <strong>one bad input contaminates
+          the whole campaign</strong> and we lose the ability to diagnose by component.
+          We'll need a new debugging methodology — probably treating the brief itself as
+          a versioned artifact with rollback. Nobody is talking about this yet.
+        </div>
+      </div>
+
+      <div class="pilot">
+        <div class="pilot-header">
+          <span class="pilot-label">Pilot Proposal</span>
+          <span class="pilot-number">N°&nbsp;02</span>
+        </div>
+        <div class="pilot-grid">
+          <div class="pilot-field-label">Hypothesis</div>
+          <div class="pilot-field-value">We can articulate a client's positioning clearly enough that a colleague unfamiliar with the brand could produce on-brand ad copy from the brief alone.</div>
+
+          <div class="pilot-field-label">Success</div>
+          <div class="pilot-field-value">Peer test: show the brief (not the brand) to a colleague. They write 5 ads. If <code>≥3</code> pass brand QA, the brief works.</div>
+
+          <div class="pilot-field-label">Cost</div>
+          <div class="pilot-field-value">~2 hours of strategy time. Zero spend. Pure internal R&amp;D.</div>
+
+          <div class="pilot-field-label">Revert</div>
+          <div class="pilot-field-value">N/A — even a failed brief tells us where our positioning thinking is weak.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ iii. ASK ADVISOR ═══════════ -->
+  <section class="section">
+    <aside class="section-aside">
+      <div class="section-numeral">iii.</div>
+      <div class="section-kicker">Ask Advisor<span class="sub">One agent, four products</span></div>
+    </aside>
+
+    <div class="section-main">
+      <h2 class="section-title">One agent across the <em>stack</em>.</h2>
+      <p class="section-lead">
+        A unified Gemini agent spanning Ads, Analytics, Merchant Center, and GMP.
+        Ask it to "find new customers for my hair care products" and it's meant to
+        pull feed data, audience signals, and draft a campaign in one flow. English-only beta.
+      </p>
+
+      <div class="sharp-read">
+        <div class="sharp-read-label">Sharper Read</div>
+        <div class="sharp-read-body">
+          Google has tried to ship cross-product assistance for three years and the
+          Ads Advisor and Analytics Advisor we have today are mediocre at best.
+          The bet here is that Gemini 3 finally makes the agent good. Possible,
+          but unproven. <strong>This is the section to be most skeptical about.</strong>
+          Cost of being wrong on it: low. Cost of being right and not testing it: medium.
+        </div>
+      </div>
+
+      <div class="pilot">
+        <div class="pilot-header">
+          <span class="pilot-label">Pilot Proposal</span>
+          <span class="pilot-number">N°&nbsp;03</span>
+        </div>
+        <div class="pilot-grid">
+          <div class="pilot-field-label">Hypothesis</div>
+          <div class="pilot-field-value">The agent can complete a multi-step task (<em>e.g.</em> "find underperforming Shopping keywords across all campaigns and propose negatives") without us re-prompting more than twice.</div>
+
+          <div class="pilot-field-label">Success</div>
+          <div class="pilot-field-value"><code>≤2</code> corrections needed. Output actionable without manual rework.</div>
+
+          <div class="pilot-field-label">Cost</div>
+          <div class="pilot-field-value">~30 minutes of one analyst's time per task. No client exposure.</div>
+
+          <div class="pilot-field-label">Revert</div>
+          <div class="pilot-field-value">3+ corrections needed across two tasks. Document failure modes; revisit in 90 days.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ iv. DEMAND GEN ═══════════ -->
+  <section class="section">
+    <aside class="section-aside">
+      <div class="section-numeral">iv.</div>
+      <div class="section-kicker">Demand Gen<span class="sub">YouTube as performance</span></div>
+    </aside>
+
+    <div class="section-main">
+      <h2 class="section-title">YouTube wants to be <em>performance</em>.</h2>
+      <p class="section-lead">
+        Demand Gen — particularly with product feeds and creator partnerships —
+        is being positioned as a peer to PMax and Search rather than an awareness layer.
+      </p>
+
+      <ul class="features">
+        <li>
+          <span class="index">a</span>
+          <div>
+            <span class="name">Demand Gen on Google Maps</span>
+            <span class="desc">Promoted Pins for foot-traffic plays. Relevant for brick-and-mortar.</span>
+          </div>
+        </li>
+        <li>
+          <span class="index">b</span>
+          <div>
+            <span class="name">Product feeds expand</span>
+            <span class="desc">Tablets, YouTube Pause ads, and new verticals including automotive.</span>
+          </div>
+        </li>
+        <li>
+          <span class="index">c</span>
+          <div>
+            <span class="name">Creator partnerships in setup</span>
+            <span class="desc">Eligible creators surface inside Google Ads. Organic videos convert to paid assets.</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="stats">
+        <div>
+          <div class="stat-value">+33%</div>
+          <div class="stat-label">CONVERSIONS WITH FEEDS</div>
+        </div>
+        <div>
+          <div class="stat-value">+20%</div>
+          <div class="stat-label">LIFT WITH CREATOR ASSETS</div>
+        </div>
+        <div>
+          <div class="stat-value">+10%</div>
+          <div class="stat-label">ROAS, DG + SEARCH + PMAX</div>
+        </div>
+      </div>
+      <p class="stat-note">Numbers are Google's, measured on attributed conversions. Cannibalization not addressed.</p>
+
+      <div class="sharp-read">
+        <div class="sharp-read-label">Sharper Read</div>
+        <div class="sharp-read-body">
+          The +33% number is almost certainly cannibalized from PMax and Search,
+          not net-new conversions. Google has run this exact framing before — same lift
+          shape, same selective stat — and our own data on PMax expansion never quite
+          matched the keynote slides. <strong>Measure incrementality, not attributed lift.</strong>
+          The genuine unlock in this section is creator partnerships in setup, not the
+          product feed extension itself.
+        </div>
+      </div>
+
+      <div class="pilot">
+        <div class="pilot-header">
+          <span class="pilot-label">Pilot Proposal</span>
+          <span class="pilot-number">N°&nbsp;04</span>
+        </div>
+        <div class="pilot-grid">
+          <div class="pilot-field-label">Hypothesis</div>
+          <div class="pilot-field-value">DG with product feeds drives <em>net-new</em> conversions for a DTC client, not cannibalized PMax/Search volume.</div>
+
+          <div class="pilot-field-label">Success</div>
+          <div class="pilot-field-value">Geo-incrementality test: <code>≥8%</code> total conversion lift in test geos vs. holdout. (Below Google's claim — we're measuring real, not attributed.)</div>
+
+          <div class="pilot-field-label">Cost</div>
+          <div class="pilot-field-value">4-week test, ~15% of budget allocated to test geos. One DTC client with a real catalogue.</div>
+
+          <div class="pilot-field-label">Revert</div>
+          <div class="pilot-field-value"><code>&lt;5%</code> incrementality at day 28. Likely cannibalization confirmed; reallocate budget.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ v. ASSET STUDIO ═══════════ -->
+  <section class="section">
+    <aside class="section-aside">
+      <div class="section-numeral">v.</div>
+      <div class="section-kicker">Asset Studio<span class="sub">Volume over polish</span></div>
+    </aside>
+
+    <div class="section-main">
+      <h2 class="section-title">Creative on a real <em>model stack</em>.</h2>
+      <p class="section-lead">
+        Asset Studio is being repositioned as the creative hub inside Google Ads
+        with Gemini 3 Pro, Imagen 4, and Veo 3 underneath. Gemini Omni Flash this summer.
+        Included with Ads at no extra cost; Veo 3 advanced features carry a spend-linked quota.
+      </p>
+
+      <div class="sharp-read">
+        <div class="sharp-read-label">Sharper Read</div>
+        <div class="sharp-read-body">
+          Generated creative will be median-quality at best for another eighteen months.
+          Veo 3 and Imagen 4 are impressive in demos and inconsistent in production —
+          we've seen this with every previous generation. <strong>The real interesting move
+          here isn't quality, it's volume.</strong> Being able to run fifty variants of a
+          creative hypothesis cheaply changes what we can learn, even if no individual
+          asset is great. That's the angle worth testing.
+        </div>
+      </div>
+
+      <div class="pilot">
+        <div class="pilot-header">
+          <span class="pilot-label">Pilot Proposal</span>
+          <span class="pilot-number">N°&nbsp;05</span>
+        </div>
+        <div class="pilot-grid">
+          <div class="pilot-field-label">Hypothesis</div>
+          <div class="pilot-field-value">Asset Studio produces a usable creative variant in under 10 minutes that would have taken our creative team more than 2 hours.</div>
+
+          <div class="pilot-field-label">Success</div>
+          <div class="pilot-field-value"><code>≥1 in 5</code> generated assets passes brand QA without major edits. Time-to-asset under 15 minutes.</div>
+
+          <div class="pilot-field-label">Cost</div>
+          <div class="pilot-field-value">~4 hours of testing time with one well-documented brand. Zero media spend.</div>
+
+          <div class="pilot-field-label">Revert</div>
+          <div class="pilot-field-value">All assets need substantial human cleanup. Treat as a 2027 conversation.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ vi. COMMERCE / UCP ═══════════ -->
+  <section class="section">
+    <aside class="section-aside">
+      <div class="section-numeral">vi.</div>
+      <div class="section-kicker">Commerce & UCP<span class="sub">Google as cash register</span></div>
+    </aside>
+
+    <div class="section-main">
+      <h2 class="section-title">Google as the <em>transactional</em> layer.</h2>
+      <p class="section-lead">
+        Universal Cart and the Universal Commerce Protocol are the most structural
+        announcements of the keynote — Google positioning itself between the consumer
+        and the merchant at the checkout itself, not just at discovery.
+      </p>
+
+      <ul class="features">
+        <li>
+          <span class="index">a</span>
+          <div>
+            <span class="name">Universal Cart</span>
+            <span class="desc">Cross-merchant cart. Nike, Sephora, Target, Walmart, Wayfair + Shopify merchants. Live in US.</span>
+          </div>
+        </li>
+        <li>
+          <span class="index">b</span>
+          <div>
+            <span class="name">BNPL inside Google Pay</span>
+            <span class="desc">Affirm and Klarna integrated at checkout.</span>
+          </div>
+        </li>
+        <li>
+          <span class="index">c</span>
+          <div>
+            <span class="name">Merchant Center upgrades</span>
+            <span class="desc">AI Performance Insights and Conversational Attributes for AI surface visibility.</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="sharp-read">
+        <div class="sharp-read-label">Sharper Read</div>
+        <div class="sharp-read-body">
+          The story Google isn't telling: <strong>UCP is the slow death of branded paid search
+          for any retailer that joins it.</strong> If a Wayfair shopper checks out inside Google,
+          Wayfair no longer needs to defend its own brand terms on Search — the funnel
+          was never on Wayfair's site to defend. Watch what happens to retailer brand-spend
+          in the back half of the year. For our ecom book, this could quietly redirect
+          20–30% of branded budget elsewhere within twelve months.
+        </div>
+      </div>
+
+      <div class="pilot">
+        <div class="pilot-header">
+          <span class="pilot-label">Pilot Proposal</span>
+          <span class="pilot-number">N°&nbsp;06</span>
+        </div>
+        <div class="pilot-grid">
+          <div class="pilot-field-label">Hypothesis</div>
+          <div class="pilot-field-value">Adding Conversational Attributes to one ecom client's feed improves AI surface visibility, regardless of UCP eligibility.</div>
+
+          <div class="pilot-field-label">Success</div>
+          <div class="pilot-field-value"><code>≥10%</code> lift in impression share on Shopping campaigns within 30 days post-implementation. Weekly tracking.</div>
+
+          <div class="pilot-field-label">Cost</div>
+          <div class="pilot-field-value">~6 hours of feed work. Zero spend, zero risk.</div>
+
+          <div class="pilot-field-label">Revert</div>
+          <div class="pilot-field-value">No measurable change at day 45. Document findings; pause further investment.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ vii. MEASUREMENT / QFCs ═══════════ -->
+  <section class="section">
+    <aside class="section-aside">
+      <div class="section-numeral">vii.</div>
+      <div class="section-kicker">Measurement<span class="sub">Predictive signal</span></div>
+    </aside>
+
+    <div class="section-main">
+      <h2 class="section-title">From <em>looking back</em> to looking forward.</h2>
+      <p class="section-lead">
+        Measurement shifted from completed-conversion attribution to predictive signal.
+        Three releases here. One — Qualified Future Conversions — matters more than the rest.
+      </p>
+
+      <ul class="features">
+        <li>
+          <span class="index">a</span>
+          <div>
+            <span class="name">Qualified Future Conversions (QFCs)</span>
+            <span class="desc">A new metric linking current spend to predicted future sales using brand-search-uplift signals. Restricted pilot.</span>
+          </div>
+        </li>
+        <li>
+          <span class="index">b</span>
+          <div>
+            <span class="name">Meridian inside Analytics 360</span>
+            <span class="desc">Google's open-source MMM, natively embedded.</span>
+          </div>
+        </li>
+        <li>
+          <span class="index">c</span>
+          <div>
+            <span class="name">Meridian GeoX</span>
+            <span class="desc">Open-source geo-incrementality testing; signals feed back into the MMM.</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="sharp-read">
+        <div class="sharp-read-label">Sharper Read</div>
+        <div class="sharp-read-body">
+          Predictive metrics need ground truth to be trusted. QFCs won't have a clean
+          validation cycle for at least eighteen months of real spend data, and Google
+          has been quiet about the model's confidence intervals. <strong>Treat QFCs as
+          directional signal — not a metric you'd defend a budget on yet.</strong>
+          The more trustworthy near-term play is Meridian inside GA360. Less novel,
+          more proven, easier to operationalize.
+        </div>
+      </div>
+
+      <div class="pilot">
+        <div class="pilot-header">
+          <span class="pilot-label">Pilot Proposal</span>
+          <span class="pilot-number">N°&nbsp;07</span>
+        </div>
+        <div class="pilot-grid">
+          <div class="pilot-field-label">Hypothesis</div>
+          <div class="pilot-field-value">Understanding QFC methodology <em>now</em> equips us to take a defensible position when clients ask about it in 2027 budget conversations.</div>
+
+          <div class="pilot-field-label">Success</div>
+          <div class="pilot-field-value">One team member produces a 1-page internal explainer: how the model works, known limitations, when to trust it, when not to.</div>
+
+          <div class="pilot-field-label">Cost</div>
+          <div class="pilot-field-value">3–4 hours of reading and writing time. No client work involved.</div>
+
+          <div class="pilot-field-label">Revert</div>
+          <div class="pilot-field-value">N/A — pure preparation.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ viii. BIDDING ═══════════ -->
+  <section class="section">
+    <aside class="section-aside">
+      <div class="section-numeral">viii.</div>
+      <div class="section-kicker">Bidding<span class="sub">Pacing & journeys</span></div>
+    </aside>
+
+    <div class="section-main">
+      <h2 class="section-title">Pacing, finally <em>automated</em>.</h2>
+      <p class="section-lead">
+        Three additions to the bidding toolkit. The pacing one solves a real operational
+        problem on every seasonal account we run.
+      </p>
+
+      <ul class="features">
+        <li>
+          <span class="index">a</span>
+          <div>
+            <span class="name">Demand-Led Pacing</span>
+            <span class="desc">Search and Shopping. Adjusts daily spend to demand signals while honouring monthly caps.</span>
+          </div>
+        </li>
+        <li>
+          <span class="index">b</span>
+          <div>
+            <span class="name">Journey-Aware Bidding (beta)</span>
+            <span class="desc">For multi-step lead-gen funnels. Bids on the full path, not just the form-fill.</span>
+          </div>
+        </li>
+        <li>
+          <span class="index">c</span>
+          <div>
+            <span class="name">Smart Bidding Exploration → Shopping &amp; PMax</span>
+            <span class="desc">Adjustable Target ROAS tolerance to capture incremental traffic.</span>
+          </div>
+        </li>
+      </ul>
+
+      <div class="sharp-read">
+        <div class="sharp-read-label">Sharper Read</div>
+        <div class="sharp-read-body">
+          Demand-Led Pacing is good, but it's solving for a problem that well-tuned
+          tROAS or tCPA accounts shouldn't have in the first place. <strong>The genuinely
+          significant release is Journey-Aware Bidding</strong> — if it works, it's the first
+          time Google has bid on something other than the last-click conversion event.
+          That matters for every lead-gen account where revenue happens weeks after the click.
+        </div>
+      </div>
+
+      <div class="pilot">
+        <div class="pilot-header">
+          <span class="pilot-label">Pilot Proposal</span>
+          <span class="pilot-number">N°&nbsp;08</span>
+        </div>
+        <div class="pilot-grid">
+          <div class="pilot-field-label">Hypothesis</div>
+          <div class="pilot-field-value">Demand-Led Pacing on a promotional account outperforms manual budget management during the peak demand window of a sale event.</div>
+
+          <div class="pilot-field-label">Success</div>
+          <div class="pilot-field-value"><code>≥10%</code> more conversions delivered in peak window for same total spend vs. our manual pacing baseline.</div>
+
+          <div class="pilot-field-label">Cost</div>
+          <div class="pilot-field-value">One promotional campaign, one sale event. Manageable risk.</div>
+
+          <div class="pilot-field-label">Revert</div>
+          <div class="pilot-field-value">Performance below manual baseline at day 7 of sale period. Switch back manually.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PILOT INDEX ═══════════ -->
+  <section class="pilot-index">
+
+    <div class="pilot-index-header">
+      <aside class="section-aside">
+        <div class="section-numeral">∗</div>
+        <div class="section-kicker">Pilot Index<span class="sub">The eight experiments</span></div>
+      </aside>
+      <div>
+        <h2 class="section-title">Eight experiments, <em>ordered</em>.</h2>
+        <p class="section-lead">
+          The pilots above, collected and sequenced by how soon they can reasonably
+          start. None are commitments. They're a menu we can pull from when we have
+          a willing client and the bandwidth to learn.
+        </p>
+      </div>
+    </div>
+
+    <div class="pilot-index-cards">
+
+      <div class="pilot-card">
+        <div class="pilot-card-num">i.</div>
+        <div class="pilot-card-body">
+          <div class="pilot-card-name">Parallel-run <em>AI Max</em> against existing Search</div>
+          <div class="pilot-card-meta">
+            <strong>Hypothesis:</strong> AI Max surfaces incremental long-tail without degrading baseline CPA.
+            <span class="divider">·</span>
+            <strong>Success:</strong> ≥30% new-query share, CPA within 15% of baseline.
+          </div>
+        </div>
+        <div class="pilot-card-when"><strong>Start</strong>Now</div>
+      </div>
+
+      <div class="pilot-card">
+        <div class="pilot-card-num">ii.</div>
+        <div class="pilot-card-body">
+          <div class="pilot-card-name">Draft a <em>sample AI Brief</em> as a thought exercise</div>
+          <div class="pilot-card-meta">
+            <strong>Hypothesis:</strong> Our positioning is clear enough that a colleague could write on-brand ads from it.
+            <span class="divider">·</span>
+            <strong>Success:</strong> 3 of 5 peer-written ads pass QA.
+          </div>
+        </div>
+        <div class="pilot-card-when"><strong>Start</strong>Now</div>
+      </div>
+
+      <div class="pilot-card">
+        <div class="pilot-card-num">iii.</div>
+        <div class="pilot-card-body">
+          <div class="pilot-card-name">Conversational Attributes <em>feed audit</em></div>
+          <div class="pilot-card-meta">
+            <strong>Hypothesis:</strong> Pays off across every AI surface regardless of UCP timing.
+            <span class="divider">·</span>
+            <strong>Success:</strong> ≥10% impression-share lift in 30 days.
+          </div>
+        </div>
+        <div class="pilot-card-when"><strong>Start</strong>Now</div>
+      </div>
+
+      <div class="pilot-card">
+        <div class="pilot-card-num">iv.</div>
+        <div class="pilot-card-body">
+          <div class="pilot-card-name">Demand Gen <em>incrementality test</em> with geo holdout</div>
+          <div class="pilot-card-meta">
+            <strong>Hypothesis:</strong> DG with feeds drives net-new conversions, not cannibalization.
+            <span class="divider">·</span>
+            <strong>Success:</strong> ≥8% real lift in test geos vs. holdout.
+          </div>
+        </div>
+        <div class="pilot-card-when"><strong>Start</strong>Now</div>
+      </div>
+
+      <div class="pilot-card">
+        <div class="pilot-card-num">v.</div>
+        <div class="pilot-card-body">
+          <div class="pilot-card-name">QFC <em>methodology brief</em> — internal explainer</div>
+          <div class="pilot-card-meta">
+            <strong>Hypothesis:</strong> Reading now prepares us for 2027 client conversations.
+            <span class="divider">·</span>
+            <strong>Success:</strong> 1-page document covering model, limits, trust thresholds.
+          </div>
+        </div>
+        <div class="pilot-card-when"><strong>Start</strong>This week</div>
+      </div>
+
+      <div class="pilot-card">
+        <div class="pilot-card-num">vi.</div>
+        <div class="pilot-card-body">
+          <div class="pilot-card-name"><em>Ask Advisor</em> evaluation on real tasks</div>
+          <div class="pilot-card-meta">
+            <strong>Hypothesis:</strong> Agent completes a multi-step task with ≤2 corrections.
+            <span class="divider">·</span>
+            <strong>Success:</strong> Output actionable without rework.
+          </div>
+        </div>
+        <div class="pilot-card-when"><strong>Start</strong>On access</div>
+      </div>
+
+      <div class="pilot-card">
+        <div class="pilot-card-num">vii.</div>
+        <div class="pilot-card-body">
+          <div class="pilot-card-name"><em>Asset Studio</em> R&amp;D — volume over polish</div>
+          <div class="pilot-card-meta">
+            <strong>Hypothesis:</strong> Generates a usable variant in &lt;10 min vs. 2h human production.
+            <span class="divider">·</span>
+            <strong>Success:</strong> 1 in 5 assets passes QA without major edits.
+          </div>
+        </div>
+        <div class="pilot-card-when"><strong>Start</strong>Summer</div>
+      </div>
+
+      <div class="pilot-card">
+        <div class="pilot-card-num">viii.</div>
+        <div class="pilot-card-body">
+          <div class="pilot-card-name"><em>Demand-Led Pacing</em> on one promotional sale event</div>
+          <div class="pilot-card-meta">
+            <strong>Hypothesis:</strong> Beats manual pacing during peak demand window.
+            <span class="divider">·</span>
+            <strong>Success:</strong> ≥10% more conversions for same spend.
+          </div>
+        </div>
+        <div class="pilot-card-when"><strong>Start</strong>On release</div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════ CLOSING ═══════════ -->
+  <section class="closing">
+
+    <aside class="section-aside">
+      <div class="aside-label">
+        Final Read
+        <span>One thought</span>
+      </div>
+    </aside>
+
+    <div>
+      <div class="closing-body">
+        <p>
+          The honest reading of GML 2026: a great deal was announced, very little
+          has shipped, and the parts that will matter most are not the parts Google
+          chose to spotlight. The story Google is telling is one of <em>AI everywhere</em>.
+          The story underneath is structural — about who controls the surface,
+          who owns the cart, and which surfaces a manual account is being quietly
+          locked out of.
+        </p>
+        <p>
+          The work over the next ninety days is <em>curiosity, measured</em>. Pick two
+          or three pilots from the list, run them properly with the success criteria
+          documented up front, and let the rest mature. We will learn more from a
+          single well-designed experiment than from chasing every feature at half-speed.
+        </p>
+      </div>
+
+      <div class="colophon">
+        <div>WRK Marketing · Paid Search · N°&nbsp;014</div>
+        <div class="fin">&mdash;&nbsp;fin.</div>
+        <div>XXI · V · MMXXVI</div>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+
+</body>
+</html>
